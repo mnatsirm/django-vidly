@@ -6,11 +6,10 @@ from .models import Movie
 def index(request):
     # get list of movies
     movies = Movie.objects.all()
-    output = ', '.join([m.title for m in movies])
+    return render(request, 'movies/index.html', {'movies': movies})
 
     # filter list
     # Movie.objects.filter(release_year=1984)
 
     # # get specific movie
     # Movie.objects.get(id=1)
-    return HttpResponse(output)
