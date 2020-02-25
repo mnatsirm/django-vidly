@@ -13,3 +13,8 @@ def index(request):
 
     # # get specific movie
     # Movie.objects.get(id=1)
+
+
+def detail(requiest, movie_id):
+    movie = Movie.objects.get(pk=movie_id)
+    return render(request, 'movies/detail.html', {'movie': movie})
