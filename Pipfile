@@ -8,7 +8,13 @@ pylint = "*"
 autopep8 = "*"
 
 [packages]
+<<<<<<< HEAD
 django = "==2.2.10"
+=======
+django = "==2.1"
+pylint-django = "*"
+django-tastypie = "*"
+>>>>>>> dev
 
 [requires]
 python_version = "3.8"
